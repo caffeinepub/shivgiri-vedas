@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.875rem;
+    /* Dark premium palette */
+    --background: 0.16 0.04 255;
+    --foreground: 0.95 0.02 255;
+    --card: 0.19 0.04 255;
+    --card-foreground: 0.95 0.02 255;
+    --popover: 0.19 0.04 255;
+    --popover-foreground: 0.95 0.02 255;
+    --primary: 0.5 0.15 145;
+    --primary-foreground: 0.98 0 0;
+    --secondary: 0.21 0.045 255;
+    --secondary-foreground: 0.95 0.02 255;
+    --muted: 0.21 0.045 255;
+    --muted-foreground: 0.62 0.025 255;
+    --accent: 0.62 0.16 145;
+    --accent-foreground: 0.98 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.28 0.04 255;
+    --input: 0.24 0.04 255;
+    --ring: 0.5 0.15 145;
+    --chart-1: 0.5 0.15 145;
+    --chart-2: 0.68 0.14 145;
+    --chart-3: 0.76 0.025 255;
+    --chart-4: 0.62 0.025 255;
+    --chart-5: 0.45 0.14 145;
+    --sidebar: 0.19 0.04 255;
+    --sidebar-foreground: 0.95 0.02 255;
+    --sidebar-primary: 0.5 0.15 145;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.21 0.045 255;
+    --sidebar-accent-foreground: 0.95 0.02 255;
+    --sidebar-border: 0.28 0.04 255;
+    --sidebar-ring: 0.5 0.15 145;
+    /* Brand-specific custom tokens */
+    --green-primary: oklch(0.5 0.15 145);
+    --green-light: oklch(0.68 0.14 145);
+    --green-glow: oklch(0.5 0.15 145 / 0.35);
+    --navy-deep: oklch(0.13 0.04 255);
+    --navy-card: oklch(0.19 0.04 255);
+    --navy-card2: oklch(0.21 0.045 255);
+    --text-heading: oklch(0.95 0.02 255);
+    --text-body: oklch(0.76 0.025 255);
+    --text-muted: oklch(0.62 0.025 255);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", "Inter", sans-serif;
+    background-color: #0f172a;
+    color: #eaf0ff;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .text-heading {
+    color: var(--text-heading);
+  }
+  .text-body {
+    color: var(--text-body);
+  }
+  .text-muted-brand {
+    color: var(--text-muted);
+  }
+
+  .bg-navy-deep {
+    background-color: var(--navy-deep);
+  }
+  .bg-navy-card {
+    background-color: var(--navy-card);
+  }
+  .bg-navy-card2 {
+    background-color: var(--navy-card2);
+  }
+
+  .btn-green {
+    background: linear-gradient(135deg, #2e7d32, #3fae4a);
+    color: #fff;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 0 20px oklch(0.5 0.15 145 / 0.35);
+  }
+  .btn-green:hover {
+    background: linear-gradient(135deg, #3fae4a, #66bb6a);
+    transform: translateY(-2px);
+    box-shadow: 0 0 32px oklch(0.5 0.15 145 / 0.55);
+  }
+
+  .btn-outline-green {
+    background: transparent;
+    color: #66bb6a;
+    border: 1.5px solid #66bb6a;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+  }
+  .btn-outline-green:hover {
+    background: linear-gradient(135deg, #2e7d32, #3fae4a);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px oklch(0.5 0.15 145 / 0.45);
+  }
+
+  .brand-card {
+    background: #111b2d;
+    border: 1px solid rgba(102, 187, 106, 0.12);
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  }
+  .brand-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(102, 187, 106, 0.35);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(46, 125, 50, 0.15);
+  }
+
+  .green-gradient-text {
+    background: linear-gradient(135deg, #66bb6a, #3fae4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .section-title {
+    font-family: "Montserrat", "Poppins", sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-weight: 700;
+    color: #eaf0ff;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    color: #b7c0d6;
+    text-align: center;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .glow-ring {
+    box-shadow: 0 0 0 2px rgba(102, 187, 106, 0.3), 0 0 60px
+      rgba(46, 125, 50, 0.25);
+  }
+
+  .stats-section {
+    background: linear-gradient(135deg, #0d2b0f 0%, #0f172a 40%, #0b1f3a 100%);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(11, 18, 32, 0.92) 0%,
+      rgba(15, 23, 42, 0.8) 60%,
+      rgba(11, 18, 32, 0.7) 100%
+    );
+  }
+
+  .navbar-blur {
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(102, 187, 106, 0.1);
+  }
+}
