@@ -10,7 +10,7 @@ const articles = [
     readTime: "5 min read",
     excerpt:
       "Discover why moringa is called the miracle tree and how its powerful nutrients can transform your health and energy levels.",
-    image: "/assets/generated/hero-moringa-leaves.dim_1920x1080.jpg",
+    image: "/assets/generated/hero-moringa-leaves.dim_1200x700.jpg",
   },
   {
     title: "How to Use Moringa Powder in Your Daily Diet",
@@ -19,7 +19,7 @@ const articles = [
     readTime: "4 min read",
     excerpt:
       "Simple and delicious ways to incorporate moringa powder into your meals, smoothies, and beverages for maximum health benefits.",
-    image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+    image: "/assets/generated/moringa-powder-spoon.dim_600x400.jpg",
   },
   {
     title: "SEO in 2026: What Changed and How to Adapt",
@@ -28,7 +28,7 @@ const articles = [
     readTime: "7 min read",
     excerpt:
       "Google's latest algorithm updates have reshaped SEO. Learn the strategies that are delivering results in 2026.",
-    image: "/assets/generated/moringa-farm.dim_1200x800.jpg",
+    image: "/assets/generated/moringa-farm.dim_800x500.jpg",
   },
   {
     title: "Moringa vs. Spirulina: Which Superfood Wins?",
@@ -37,7 +37,7 @@ const articles = [
     readTime: "6 min read",
     excerpt:
       "A detailed nutritional comparison of two popular superfoods to help you choose what's best for your health goals.",
-    image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+    image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
   },
   {
     title: "Social Media Marketing Strategy for Small Businesses",
@@ -46,7 +46,7 @@ const articles = [
     readTime: "8 min read",
     excerpt:
       "A practical guide to building a strong social media presence on a budget, with templates and tactics that actually work.",
-    image: "/assets/generated/moringa-farm.dim_1200x800.jpg",
+    image: "/assets/generated/moringa-tree-leaves.dim_600x400.jpg",
   },
   {
     title: "Organic Farming: The Future of Food in India",
@@ -55,7 +55,7 @@ const articles = [
     readTime: "5 min read",
     excerpt:
       "How organic farming practices in Maharashtra are changing the food industry and why consumers are embracing the shift.",
-    image: "/assets/generated/hero-moringa-leaves.dim_1920x1080.jpg",
+    image: "/assets/generated/moringa-jar-product.dim_600x600.jpg",
   },
 ];
 

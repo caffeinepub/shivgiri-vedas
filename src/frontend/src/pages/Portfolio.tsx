@@ -3,6 +3,15 @@ import { ArrowRight, TrendingUp } from "lucide-react";
 import { useState } from "react";
 import { useReveal } from "../hooks/useReveal";
 
+const portfolioImages = [
+  "/assets/generated/moringa-farm.dim_800x500.jpg",
+  "/assets/generated/moringa-tree-leaves.dim_600x400.jpg",
+  "/assets/generated/moringa-powder-spoon.dim_600x400.jpg",
+  "/assets/generated/moringa-jar-product.dim_600x600.jpg",
+  "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
+  "/assets/generated/hero-moringa-leaves.dim_1200x700.jpg",
+];
+
 const cases = [
   {
     title: "SEO Growth 300%",
@@ -124,7 +133,9 @@ export default function Portfolio() {
                 style={{ transitionDelay: `${i * 0.1}s`, height: "340px" }}
               >
                 <img
-                  src="/assets/generated/moringa-farm.dim_1200x800.jpg"
+                  src={
+                    portfolioImages[cases.indexOf(c) % portfolioImages.length]
+                  }
                   alt={c.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />

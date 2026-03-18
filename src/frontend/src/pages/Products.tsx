@@ -16,34 +16,34 @@ import { useReveal } from "../hooks/useReveal";
 
 const products = [
   {
-    name: "Shivgiri Moringa Powder",
+    name: "Shivgiri Vedas",
     price: "₹299",
     priceNum: 299,
     originalPrice: "₹399",
     size: "100g",
-    image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+    image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
     rating: 4.9,
     reviews: 124,
     popular: false,
   },
   {
-    name: "Shivgiri Moringa Powder",
+    name: "Shivgiri Vedas",
     price: "₹649",
     priceNum: 649,
     originalPrice: "₹849",
     size: "250g",
-    image: "/assets/generated/moringa-product-package.dim_800x800.jpg",
+    image: "/assets/generated/moringa-product-package.dim_600x600.jpg",
     rating: 4.9,
     reviews: 256,
     popular: true,
   },
   {
-    name: "Shivgiri Moringa Powder",
+    name: "Shivgiri Vedas",
     price: "₹999",
     priceNum: 999,
     originalPrice: "₹1,199",
     size: "500g",
-    image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+    image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
     rating: 4.8,
     reviews: 89,
     popular: false,
@@ -279,7 +279,7 @@ export default function Products() {
         className="relative pt-32 pb-20"
         style={{
           backgroundImage:
-            "url('/assets/generated/hero-moringa-leaves.dim_1920x1080.jpg')",
+            "url('/assets/generated/hero-moringa-leaves.dim_1200x700.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -323,12 +323,30 @@ export default function Products() {
                     BEST SELLER
                   </div>
                 )}
-                <div className="overflow-hidden h-56">
+                <div className="overflow-hidden h-56 relative">
                   <img
                     src={p.image}
                     alt={p.name}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
+                  <span
+                    style={{
+                      position: "absolute",
+                      bottom: "10px",
+                      left: "10px",
+                      background: "rgba(46,125,50,0.85)",
+                      color: "#fff",
+                      fontSize: "0.7rem",
+                      fontWeight: 700,
+                      padding: "3px 10px",
+                      borderRadius: "999px",
+                      letterSpacing: "0.04em",
+                      backdropFilter: "blur(4px)",
+                      zIndex: 10,
+                    }}
+                  >
+                    Shivgiri Vedas
+                  </span>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-1 mb-2">

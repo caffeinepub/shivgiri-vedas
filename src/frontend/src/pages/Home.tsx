@@ -268,7 +268,7 @@ export default function Home() {
         className="relative min-h-screen flex items-center"
         style={{
           backgroundImage:
-            "url('/assets/generated/hero-moringa-leaves.dim_1920x1080.jpg')",
+            "url('/assets/generated/hero-moringa-leaves.dim_1200x700.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -443,20 +443,20 @@ export default function Home() {
               {
                 name: "Shivgiri Moringa Powder 100g",
                 price: "₹299",
-                image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+                image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
                 popular: false,
               },
               {
                 name: "Shivgiri Moringa Powder 250g",
                 price: "₹649",
                 image:
-                  "/assets/generated/moringa-product-package.dim_800x800.jpg",
+                  "/assets/generated/moringa-product-package.dim_600x600.jpg",
                 popular: true,
               },
               {
                 name: "Shivgiri Moringa Powder 500g",
                 price: "₹999",
-                image: "/assets/generated/moringa-powder-bowl.dim_800x800.jpg",
+                image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
                 popular: false,
               },
             ].map((p, i) => (
@@ -624,7 +624,7 @@ export default function Home() {
                 style={{ transitionDelay: `${i * 0.1}s`, height: "280px" }}
               >
                 <img
-                  src="/assets/generated/moringa-farm.dim_1200x800.jpg"
+                  src="/assets/generated/moringa-farm.dim_800x500.jpg"
                   alt={p.title}
                   className="w-full h-full object-cover"
                 />
@@ -804,7 +804,7 @@ export default function Home() {
         className="py-24 relative"
         style={{
           backgroundImage:
-            "url('/assets/generated/moringa-farm.dim_1200x800.jpg')",
+            "url('/assets/generated/moringa-farm.dim_800x500.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -6,24 +6,28 @@ const team = [
   {
     name: "Shivam Bachute",
     role: "Founder & CEO",
+    image: "/assets/generated/team-founder.dim_300x300.jpg",
     initials: "SB",
     color: "from-green-700 to-green-500",
   },
   {
     name: "Parshuram Malwadkar",
     role: "Head of Marketing",
+    image: "/assets/generated/team-marketing.dim_300x300.jpg",
     initials: "PM",
     color: "from-emerald-700 to-emerald-500",
   },
   {
     name: "Rohit Kumar",
     role: "Lead SEO Strategist",
+    image: "/assets/generated/team-marketing.dim_300x300.jpg",
     initials: "RK",
     color: "from-teal-700 to-teal-500",
   },
   {
     name: "Sneha Joshi",
     role: "Content Director",
+    image: "/assets/generated/team-wellness.dim_300x300.jpg",
     initials: "SJ",
     color: "from-green-800 to-green-600",
   },
@@ -63,7 +67,7 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="reveal">
               <img
-                src="/assets/generated/moringa-farm.dim_1200x800.jpg"
+                src="/assets/generated/moringa-tree-leaves.dim_600x400.jpg"
                 alt="Moringa Farm"
                 className="rounded-2xl w-full object-cover glow-ring"
                 style={{ height: "420px" }}
@@ -194,16 +198,20 @@ export default function About() {
             {team.map((m, i) => (
               <div
                 key={m.name}
-                className="brand-card p-6 text-center reveal"
+                className="brand-card overflow-hidden text-center reveal"
                 style={{ transitionDelay: `${i * 0.1}s` }}
               >
-                <div
-                  className={`w-20 h-20 rounded-full bg-gradient-to-br ${m.color} flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold`}
-                >
-                  {m.initials}
+                <div className="h-52 overflow-hidden">
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <h3 className="text-white font-semibold mb-1">{m.name}</h3>
-                <p className="text-[#8B95AD] text-sm">{m.role}</p>
+                <div className="p-5">
+                  <h3 className="text-white font-semibold mb-1">{m.name}</h3>
+                  <p className="text-[#8B95AD] text-sm">{m.role}</p>
+                </div>
               </div>
             ))}
           </div>
