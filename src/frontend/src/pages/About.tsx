@@ -6,7 +6,7 @@ const team = [
   {
     name: "Shivam Bachute",
     role: "Founder & CEO",
-    image: "/assets/generated/team-founder.dim_300x300.jpg",
+    image: "/assets/uploads/IMG_20250601_121116-1.jpg",
     initials: "SB",
     color: "from-green-700 to-green-500",
   },

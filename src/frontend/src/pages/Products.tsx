@@ -21,7 +21,7 @@ const products = [
     priceNum: 299,
     originalPrice: "₹399",
     size: "100g",
-    image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
+    image: "/assets/generated/shivgiri-vedas-moringa-product.dim_600x600.png",
     rating: 4.9,
     reviews: 124,
     popular: false,
@@ -32,7 +32,7 @@ const products = [
     priceNum: 649,
     originalPrice: "₹849",
     size: "250g",
-    image: "/assets/generated/moringa-product-package.dim_600x600.jpg",
+    image: "/assets/generated/shivgiri-vedas-moringa-product.dim_600x600.png",
     rating: 4.9,
     reviews: 256,
     popular: true,
@@ -43,7 +43,7 @@ const products = [
     priceNum: 999,
     originalPrice: "₹1,199",
     size: "500g",
-    image: "/assets/generated/moringa-powder-bowl.dim_600x600.jpg",
+    image: "/assets/generated/shivgiri-vedas-moringa-product.dim_600x600.png",
     rating: 4.8,
     reviews: 89,
     popular: false,
@@ -326,27 +326,48 @@ export default function Products() {
                 <div className="overflow-hidden h-56 relative">
                   <img
                     src={p.image}
-                    alt={p.name}
+                    alt="Shivgiri Vedas Moringa Powder"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <span
+                  {/* Brand label overlay on product image */}
+                  <div
                     style={{
                       position: "absolute",
-                      bottom: "10px",
-                      left: "10px",
-                      background: "rgba(46,125,50,0.85)",
-                      color: "#fff",
-                      fontSize: "0.7rem",
-                      fontWeight: 700,
-                      padding: "3px 10px",
-                      borderRadius: "999px",
-                      letterSpacing: "0.04em",
-                      backdropFilter: "blur(4px)",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      background:
+                        "linear-gradient(to top, rgba(14,90,20,0.92) 0%, rgba(14,90,20,0.5) 70%, transparent 100%)",
+                      padding: "18px 14px 10px",
                       zIndex: 10,
                     }}
                   >
-                    Shivgiri Vedas
-                  </span>
+                    <span
+                      style={{
+                        display: "block",
+                        color: "#fff",
+                        fontSize: "1rem",
+                        fontWeight: 800,
+                        letterSpacing: "0.06em",
+                        textShadow: "0 1px 4px rgba(0,0,0,0.5)",
+                        fontFamily: "Montserrat, sans-serif",
+                      }}
+                    >
+                      Shivgiri Vedas
+                    </span>
+                    <span
+                      style={{
+                        display: "block",
+                        color: "#A5D6A7",
+                        fontSize: "0.72rem",
+                        fontWeight: 500,
+                        letterSpacing: "0.04em",
+                        marginTop: "2px",
+                      }}
+                    >
+                      Organic Moringa Powder
+                    </span>
+                  </div>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-1 mb-2">
